@@ -58,17 +58,11 @@ Build and run `safari/FourtyTwolities/FourtyTwolities.xcodeproj`, then enable th
 
 Bump `version` in `extension/manifest.json`. For Safari, also bump `MARKETING_VERSION` in `safari/FourtyTwolities/FourtyTwolities.xcodeproj/project.pbxproj`.
 
-### Chromium
-
-Zip the **contents** of `extension/` so `manifest.json` is at the zip root (not a parent folder). Upload that zip in the [Chrome Web Store dashboard](https://chrome.google.com/webstore/devconsole). Chrome ignores `browser_specific_settings`.
-
-### Firefox
-
 ```
-npx web-ext build
+./package.sh
 ```
 
-Writes `web-ext-artifacts/fourtytwolities-<version>.zip`. Submit it on [addons.mozilla.org](https://addons.mozilla.org/developers/). Nothing leaves the browser; AMO data collection is declared as `none`.
+Builds Chromium and Firefox zips in parallel under `web-ext-artifacts/`. Upload `fourtytwolities-<version>-chromium.zip` in the [Chrome Web Store dashboard](https://chrome.google.com/webstore/devconsole) (`manifest.json` is at the zip root; Chrome ignores `browser_specific_settings`). Submit `fourtytwolities-<version>.zip` on [addons.mozilla.org](https://addons.mozilla.org/developers/). Nothing leaves the browser; AMO data collection is declared as `none`.
 
 ### Safari
 
