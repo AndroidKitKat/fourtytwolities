@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "FourtyTwolities",
+  "short_name": "42lities",
+  "version": "1.1.0",
+  "description": "Unofficial grok.com helper. Auto-confirm ?q= prompts when the URL hash includes a matching #gwc=TOKEN. Not affiliated with xAI.",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_title": "FourtyTwolities",
+    "default_popup": "options.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png"
+    }
+  },
+  "options_ui": {
+    "page": "options.html"
+  },
+  "permissions": ["storage"],
+  "host_permissions": ["https://grok.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://grok.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "safari": {
+      "strict_min_version": "16.0"
+    }
+  }
+}

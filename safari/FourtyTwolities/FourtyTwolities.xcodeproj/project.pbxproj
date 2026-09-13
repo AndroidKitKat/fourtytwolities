@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 110;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C637BAD3056EE2C00089C5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C637BAC3056EE2C00089C5E /* AppDelegate.swift */; };
+		1C637BB13056EE2C00089C5E /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 1C637BAF3056EE2C00089C5E /* Main.html */; };
+		1C637BB33056EE2C00089C5E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C637BB23056EE2C00089C5E /* Icon.png */; };
+		1C637BB53056EE2C00089C5E /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 1C637BB43056EE2C00089C5E /* Style.css */; };
+		1C637BB73056EE2C00089C5E /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 1C637BB63056EE2C00089C5E /* Script.js */; };
+		1C637BB93056EE2C00089C5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C637BB83056EE2C00089C5E /* ViewController.swift */; };
+		1C637BBC3056EE2C00089C5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C637BBA3056EE2C00089C5E /* Main.storyboard */; };
+		1C637BBE3056EE2D00089C5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C637BBD3056EE2D00089C5E /* Assets.xcassets */; };
+		1C637BC53056EE2D00089C5E /* FourtyTwolities Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1C637BC43056EE2D00089C5E /* FourtyTwolities Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1C637BCA3056EE2D00089C5E /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C637BC93056EE2D00089C5E /* SafariWebExtensionHandler.swift */; };
+		1C637BDB3056EE2D00089C5E /* options.js in Resources */ = {isa = PBXBuildFile; fileRef = 1C637BD63056EE2D00089C5E /* options.js */; };
+		1C637BDC3056EE2D00089C5E /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 1C637BD73056EE2D00089C5E /* icons */; };
+		1C637BDD3056EE2D00089C5E /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C637BD83056EE2D00089C5E /* manifest.json */; };
+		1C637BDE3056EE2D00089C5E /* options.html in Resources */ = {isa = PBXBuildFile; fileRef = 1C637BD93056EE2D00089C5E /* options.html */; };
+		1C637BDF3056EE2D00089C5E /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 1C637BDA3056EE2D00089C5E /* content.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1C637BC63056EE2D00089C5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1C637BA13056EE2C00089C5E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C637BC33056EE2D00089C5E;
+			remoteInfo = "FourtyTwolities Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1C637BD13056EE2D00089C5E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = PlugIns;
+			files = (
+				1C637BC53056EE2D00089C5E /* FourtyTwolities Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1C637BA93056EE2C00089C5E /* FourtyTwolities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourtyTwolities.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C637BAC3056EE2C00089C5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1C637BB03056EE2C00089C5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
+		1C637BB23056EE2C00089C5E /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		1C637BB43056EE2C00089C5E /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		1C637BB63056EE2C00089C5E /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		1C637BB83056EE2C00089C5E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1C637BBB3056EE2C00089C5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1C637BBD3056EE2D00089C5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1C637BBF3056EE2D00089C5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C637BC43056EE2D00089C5E /* FourtyTwolities Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FourtyTwolities Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C637BC93056EE2D00089C5E /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		1C637BCB3056EE2D00089C5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C637BD63056EE2D00089C5E /* options.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = options.js; path = ../../../extension/options.js; sourceTree = "<group>"; };
+		1C637BD73056EE2D00089C5E /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icons; path = ../../../extension/icons; sourceTree = "<group>"; };
+		1C637BD83056EE2D00089C5E /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = ../../../extension/manifest.json; sourceTree = "<group>"; };
+		1C637BD93056EE2D00089C5E /* options.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = options.html; path = ../../../extension/options.html; sourceTree = "<group>"; };
+		1C637BDA3056EE2D00089C5E /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = content.js; path = ../../../extension/content.js; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1C637BA63056EE2C00089C5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		1C637BC13056EE2D00089C5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C637BA03056EE2C00089C5E = {
+			isa = PBXGroup;
+			children = (
+				1C637BAB3056EE2C00089C5E /* FourtyTwolities */,
+				1C637BC83056EE2D00089C5E /* FourtyTwolities Extension */,
+				1C637BAA3056EE2C00089C5E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1C637BAA3056EE2C00089C5E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1C637BA93056EE2C00089C5E /* FourtyTwolities.app */,
+				1C637BC43056EE2D00089C5E /* FourtyTwolities Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1C637BAB3056EE2C00089C5E /* FourtyTwolities */ = {
+			isa = PBXGroup;
+			children = (
+				1C637BAC3056EE2C00089C5E /* AppDelegate.swift */,
+				1C637BB83056EE2C00089C5E /* ViewController.swift */,
+				1C637BBA3056EE2C00089C5E /* Main.storyboard */,
+				1C637BBD3056EE2D00089C5E /* Assets.xcassets */,
+				1C637BBF3056EE2D00089C5E /* Info.plist */,
+				1C637BAE3056EE2C00089C5E /* Resources */,
+			);
+			path = FourtyTwolities;
+			sourceTree = "<group>";
+		};
+		1C637BAE3056EE2C00089C5E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1C637BAF3056EE2C00089C5E /* Main.html */,
+				1C637BB23056EE2C00089C5E /* Icon.png */,
+				1C637BB43056EE2C00089C5E /* Style.css */,
+				1C637BB63056EE2C00089C5E /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1C637BC83056EE2D00089C5E /* FourtyTwolities Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1C637BD53056EE2D00089C5E /* Resources */,
+				1C637BC93056EE2D00089C5E /* SafariWebExtensionHandler.swift */,
+				1C637BCB3056EE2D00089C5E /* Info.plist */,
+			);
+			path = "FourtyTwolities Extension";
+			sourceTree = "<group>";
+		};
+		1C637BD53056EE2D00089C5E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1C637BD63056EE2D00089C5E /* options.js */,
+				1C637BD73056EE2D00089C5E /* icons */,
+				1C637BD83056EE2D00089C5E /* manifest.json */,
+				1C637BD93056EE2D00089C5E /* options.html */,
+				1C637BDA3056EE2D00089C5E /* content.js */,
+			);
+			name = Resources;
+			path = "FourtyTwolities Extension";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1C637BA83056EE2C00089C5E /* FourtyTwolities */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C637BD23056EE2D00089C5E /* Build configuration list for PBXNativeTarget "FourtyTwolities" */;
+			buildPhases = (
+				1C637BA53056EE2C00089C5E /* Sources */,
+				1C637BA63056EE2C00089C5E /* Frameworks */,
+				1C637BA73056EE2C00089C5E /* Resources */,
+				1C637BD13056EE2D00089C5E /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1C637BC73056EE2D00089C5E /* PBXTargetDependency */,
+			);
+			name = FourtyTwolities;
+			productName = FourtyTwolities;
+			productReference = 1C637BA93056EE2C00089C5E /* FourtyTwolities.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1C637BC33056EE2D00089C5E /* FourtyTwolities Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C637BCE3056EE2D00089C5E /* Build configuration list for PBXNativeTarget "FourtyTwolities Extension" */;
+			buildPhases = (
+				1C637BC03056EE2D00089C5E /* Sources */,
+				1C637BC13056EE2D00089C5E /* Frameworks */,
+				1C637BC23056EE2D00089C5E /* Resources */,
+			);
+			buildRules = (
+			);
+			name = "FourtyTwolities Extension";
+			productName = "FourtyTwolities Extension";
+			productReference = 1C637BC43056EE2D00089C5E /* FourtyTwolities Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1C637BA13056EE2C00089C5E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					1C637BA83056EE2C00089C5E = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					1C637BC33056EE2D00089C5E = {
+						CreatedOnToolsVersion = 27.0;
+					};
+				};
+			};
+			buildConfigurationList = 1C637BA43056EE2C00089C5E /* Build configuration list for PBXProject "FourtyTwolities" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1C637BA03056EE2C00089C5E;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 1C637BAA3056EE2C00089C5E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1C637BA83056EE2C00089C5E /* FourtyTwolities */,
+				1C637BC33056EE2D00089C5E /* FourtyTwolities Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1C637BA73056EE2C00089C5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+				1C637BB33056EE2C00089C5E /* Icon.png in Resources */,
+				1C637BBC3056EE2C00089C5E /* Main.storyboard in Resources */,
+				1C637BB73056EE2C00089C5E /* Script.js in Resources */,
+				1C637BB13056EE2C00089C5E /* Main.html in Resources */,
+				1C637BBE3056EE2D00089C5E /* Assets.xcassets in Resources */,
+				1C637BB53056EE2C00089C5E /* Style.css in Resources */,
+			);
+		};
+		1C637BC23056EE2D00089C5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+				1C637BDB3056EE2D00089C5E /* options.js in Resources */,
+				1C637BDD3056EE2D00089C5E /* manifest.json in Resources */,
+				1C637BDC3056EE2D00089C5E /* icons in Resources */,
+				1C637BDE3056EE2D00089C5E /* options.html in Resources */,
+				1C637BDF3056EE2D00089C5E /* content.js in Resources */,
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1C637BA53056EE2C00089C5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				1C637BB93056EE2C00089C5E /* ViewController.swift in Sources */,
+				1C637BAD3056EE2C00089C5E /* AppDelegate.swift in Sources */,
+			);
+		};
+		1C637BC03056EE2D00089C5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				1C637BCA3056EE2D00089C5E /* SafariWebExtensionHandler.swift in Sources */,
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1C637BC73056EE2D00089C5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C637BC33056EE2D00089C5E /* FourtyTwolities Extension */;
+			targetProxy = 1C637BC63056EE2D00089C5E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1C637BAF3056EE2C00089C5E /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C637BB03056EE2C00089C5E /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		1C637BBA3056EE2C00089C5E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C637BBB3056EE2C00089C5E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1C637BCC3056EE2D00089C5E /* Debug configuration for PBXProject "FourtyTwolities" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1C637BCD3056EE2D00089C5E /* Release configuration for PBXProject "FourtyTwolities" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		1C637BCF3056EE2D00089C5E /* Debug configuration for PBXNativeTarget "FourtyTwolities Extension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FourtyTwolities Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "FourtyTwolities Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.androidkitkat.fourtytwolities.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		1C637BD03056EE2D00089C5E /* Release configuration for PBXNativeTarget "FourtyTwolities Extension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FourtyTwolities Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "FourtyTwolities Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.androidkitkat.fourtytwolities.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		1C637BD33056EE2D00089C5E /* Debug configuration for PBXNativeTarget "FourtyTwolities" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FourtyTwolities/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FourtyTwolities;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_NSViewGestureRecognizerIsExclusive = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.androidkitkat.fourtytwolities;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		1C637BD43056EE2D00089C5E /* Release configuration for PBXNativeTarget "FourtyTwolities" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FourtyTwolities/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FourtyTwolities;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_NSViewGestureRecognizerIsExclusive = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.androidkitkat.fourtytwolities;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1C637BA43056EE2C00089C5E /* Build configuration list for PBXProject "FourtyTwolities" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C637BCC3056EE2D00089C5E /* Debug configuration for PBXProject "FourtyTwolities" */,
+				1C637BCD3056EE2D00089C5E /* Release configuration for PBXProject "FourtyTwolities" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		1C637BCE3056EE2D00089C5E /* Build configuration list for PBXNativeTarget "FourtyTwolities Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C637BCF3056EE2D00089C5E /* Debug configuration for PBXNativeTarget "FourtyTwolities Extension" */,
+				1C637BD03056EE2D00089C5E /* Release configuration for PBXNativeTarget "FourtyTwolities Extension" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		1C637BD23056EE2D00089C5E /* Build configuration list for PBXNativeTarget "FourtyTwolities" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C637BD33056EE2D00089C5E /* Debug configuration for PBXNativeTarget "FourtyTwolities" */,
+				1C637BD43056EE2D00089C5E /* Release configuration for PBXNativeTarget "FourtyTwolities" */,
+			);
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1C637BA13056EE2C00089C5E /* Project object */;
+	validationLevel = 1;
+}
