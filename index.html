@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FourtyTwolities — Quality of life for grok.com</title>
+    <meta
+      name="description"
+      content="A small browser extension with extra utilities for grok.com."
+    />
+    <link rel="icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <style>
+      :root {
+        --bg: #fff;
+        --fg: #111;
+        --muted: #6b7280;
+        --line: #e5e7eb;
+        --card: #f8f9fb;
+        --navy: #0c2148;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      header {
+        display: flex;
+        justify-content: center;
+        padding: 1.5rem 1.25rem 0;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.65rem;
+        font-weight: 650;
+        letter-spacing: -0.02em;
+      }
+
+      .brand img {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+      }
+
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 1.25rem 4rem;
+      }
+
+      .hero {
+        text-align: center;
+        padding: 2.75rem 0 0.5rem;
+      }
+
+      h1 {
+        margin: 0 auto 0.7rem;
+        font-size: clamp(1.85rem, 4vw, 2.35rem);
+        line-height: 1.15;
+        letter-spacing: -0.04em;
+      }
+
+      .tagline {
+        margin: 0 auto 1.5rem;
+        color: var(--muted);
+        font-size: 1.15rem;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.65rem;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 2.7rem;
+        padding: 0.45rem 1.05rem;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: #fff;
+        font: inherit;
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+
+      .btn.primary {
+        background: var(--navy);
+        border-color: var(--navy);
+        color: #fff;
+      }
+
+      .preview {
+        width: min(22rem, 100%);
+        margin: 2.4rem auto 1.6rem;
+        padding: 1.15rem 1.2rem 1.25rem;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: #fff;
+        box-shadow: 0 18px 50px color-mix(in srgb, var(--navy) 10%, transparent);
+        text-align: left;
+      }
+
+      .preview h2 {
+        margin: 0;
+        font-size: 1.05rem;
+        letter-spacing: -0.03em;
+      }
+
+      .preview p {
+        margin: 0.15rem 0 0.9rem;
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      .preview .group {
+        margin-top: 0.85rem;
+        font-size: 0.68rem;
+        font-weight: 650;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .preview ul {
+        margin: 0.35rem 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .preview li {
+        display: flex;
+        gap: 0.55rem;
+        align-items: flex-start;
+        margin-top: 0.45rem;
+        font-size: 0.92rem;
+      }
+
+      .check {
+        flex: none;
+        width: 1rem;
+        height: 1rem;
+        margin-top: 0.15rem;
+        border-radius: 4px;
+        background: var(--navy);
+        color: #fff;
+        font-size: 0.7rem;
+        line-height: 1rem;
+        text-align: center;
+      }
+
+      .lede {
+        max-width: 38rem;
+        margin: 0 auto;
+        color: var(--muted);
+        font-size: 0.98rem;
+      }
+
+      .features {
+        margin-top: 3.5rem;
+      }
+
+      .features > h2 {
+        margin: 0 0 1.4rem;
+        font-size: 1.45rem;
+        letter-spacing: -0.03em;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem 1.6rem;
+      }
+
+      .feature h3 {
+        margin: 0 0 0.4rem;
+        font-size: 1.05rem;
+        letter-spacing: -0.02em;
+      }
+
+      .feature p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 0.9em;
+      }
+
+      .icon {
+        display: grid;
+        place-items: center;
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-bottom: 0.75rem;
+        border-radius: 999px;
+        background: var(--navy);
+        color: #fff;
+      }
+
+      .icon svg {
+        width: 1.15rem;
+        height: 1.15rem;
+      }
+
+      footer {
+        border-top: 1px solid var(--line);
+        background: var(--card);
+      }
+
+      .foot {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr 1fr;
+        gap: 2rem;
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 2.4rem 1.25rem 2.8rem;
+      }
+
+      .foot .brand {
+        margin-bottom: 0.55rem;
+      }
+
+      .foot p {
+        margin: 0;
+        max-width: 22rem;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .foot h2 {
+        margin: 0 0 0.65rem;
+        font-size: 0.95rem;
+      }
+
+      .foot ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .foot li {
+        margin: 0.35rem 0;
+      }
+
+      .foot a {
+        color: var(--muted);
+      }
+
+      .foot a:hover {
+        color: var(--fg);
+      }
+
+      @media (max-width: 720px) {
+        .grid,
+        .foot {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#">
+        <img src="icon.png" width="36" height="36" alt="" />
+        FourtyTwolities
+      </a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Quality of life for grok.com</h1>
+        <p class="tagline">Extra utilities for Grok, applied without a reload.</p>
+        <div class="actions">
+          <!-- Replace these hrefs with store / source URLs when you have them. -->
+          <a class="btn primary" href="#get">Get FourtyTwolities</a>
+          <a class="btn" href="#chrome">Chrome</a>
+          <a class="btn" href="#safari">Safari</a>
+          <a class="btn" href="#source">Source</a>
+        </div>
+
+        <div class="preview" aria-hidden="true">
+          <h2>FourtyTwolities</h2>
+          <p>Quality of life for grok.com</p>
+          <div class="group">Chat</div>
+          <ul>
+            <li><span class="check">✓</span> Compact, wider transcript</li>
+            <li><span class="check">✓</span> Hide Imagine</li>
+            <li><span class="check">✓</span> Block video autoplay</li>
+            <li><span class="check">✓</span> Remember your model</li>
+          </ul>
+        </div>
+
+        <p class="lede">
+          FourtyTwolities is a small browser extension for grok.com. It skips
+          the send confirm on prefilled links, tidies the transcript, and
+          remembers the model you last used.
+        </p>
+      </section>
+
+      <section class="features">
+        <h2>Key Features</h2>
+        <div class="grid">
+          <article class="feature">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </div>
+            <h3>Auto-send</h3>
+            <p>
+              Grok asks “Send this message?” when a link pre-fills a prompt.
+              Put your token in the hash as <code>#gwc=…</code> and
+              FourtyTwolities clicks Send.
+            </p>
+          </article>
+          <article class="feature">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="4" y="5" width="16" height="14" rx="2" />
+                <path d="M8 9h8M8 13h5" />
+              </svg>
+            </div>
+            <h3>Compact, wider transcript</h3>
+            <p>Tighter spacing and a wider reading column on grok.com.</p>
+          </article>
+          <article class="feature">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="8" />
+                <path d="M8 12h8" />
+              </svg>
+            </div>
+            <h3>Hide Imagine</h3>
+            <p>Removes the Imagine entry from Grok’s header.</p>
+          </article>
+          <article class="feature">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="6" width="18" height="12" rx="2" />
+                <path d="M10 10l5 2-5 2v-4z" fill="currentColor" stroke="none" />
+              </svg>
+            </div>
+            <h3>Block video autoplay</h3>
+            <p>
+              Videos stay paused until you click them. Cover loops on Imagine
+              stay still.
+            </p>
+          </article>
+          <article class="feature">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 3v3M12 18v3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M3 12h3M18 12h3M4.9 19.1l2.1-2.1M17 7l2.1-2.1" />
+                <circle cx="12" cy="12" r="3.5" />
+              </svg>
+            </div>
+            <h3>Remember your model</h3>
+            <p>
+              Restores Fast, Auto, Expert, Heavy, or Build on new chats.
+            </p>
+          </article>
+          <article class="feature">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="5" y="4" width="14" height="16" rx="2" />
+                <path d="M9 8h6M9 12h6M9 16h3" />
+              </svg>
+            </div>
+            <h3>No reload</h3>
+            <p>
+              Chat options live in the toolbar popup and apply on grok.com
+              without refreshing the page.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="foot">
+        <div>
+          <div class="brand">
+            <img src="icon.png" width="36" height="36" alt="" />
+            FourtyTwolities
+          </div>
+          <p>Quality of life for grok.com.</p>
+        </div>
+        <div>
+          <h2>Get it</h2>
+          <ul>
+            <li><a href="#chrome">Chrome</a></li>
+            <li><a href="#safari">Safari</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Resources</h2>
+          <ul>
+            <li><a href="#source">Source</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
