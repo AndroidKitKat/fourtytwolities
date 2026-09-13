@@ -1,8 +1,6 @@
 # FourtyTwolities
 
-Unofficial grok.com helper. Not affiliated with xAI.
-
-A Safari / Chromium extension that auto-confirms grok.com’s “Send this message?” dialog when the URL includes a matching `#gwc=TOKEN`.
+Extra utilities and quality of life for Grok.com
 
 Example: `https://grok.com/?q=hello#gwc=YOUR_TOKEN`
 
