@@ -8,3 +8,5 @@ build/
 .swiftpm/
 .idea/
 *.log
+web-ext-artifacts/
+*.xpi

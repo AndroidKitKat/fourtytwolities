@@ -19,11 +19,16 @@
       html,
       body {
         margin: 0;
-        min-width: 40rem;
         width: 40rem;
         background: var(--bg);
         color: var(--fg);
         font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      @media (max-width: 600px) {
+        html,
+        body {
+          width: 100%;
+        }
       }
       main {
         box-sizing: border-box;

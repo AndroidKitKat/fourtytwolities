@@ -24,13 +24,52 @@ Toggles in the toolbar popup, applied on grok.com without a reload:
 - Block video autoplay until you click the video
 - Remember Fast / Auto / Expert / Heavy / Build
 
-Reload grok.com after you reload the extension itself (`chrome://extensions`).
+Reload grok.com after you reload the extension itself.
 
-## Chromium
+## Develop
 
-1. `chrome://extensions` → Developer mode → Load unpacked → `extension/`
-2. Open the toolbar popup, copy the token, and build a `?q=…#gwc=…` link.
+One tree: `extension/`. Chromium and Firefox load it directly. Safari’s Xcode target references those same files; don’t duplicate them.
 
-## Safari
+After you change code, reload the extension, then reload grok.com. Open the toolbar popup, copy the token, and build a `?q=…#gwc=…` link.
+
+### Chromium
+
+`chrome://extensions` → Developer mode → Load unpacked → `extension/`
+
+### Firefox
+
+Needs Firefox 140+ (142+ on Android).
+
+1. `about:debugging#/runtime/this-firefox` → Load Temporary Add-on → `extension/manifest.json`
+2. Allow grok.com if Firefox asks (Add-ons Manager → FourtyTwolities → Permissions).
+3. Pin the toolbar button.
+
+Temporary add-ons disappear when Firefox quits. Reload from about:debugging after you pull; the gecko id is `fourtytwolities@michaeleisemann.com`, so storage survives a reload in the same session.
+
+```
+npx web-ext lint
+```
+
+### Safari
 
 Build and run `safari/FourtyTwolities/FourtyTwolities.xcodeproj`, then enable the extension in Safari Settings. Unsigned local builds need Develop → Allow Unsigned Extensions.
+
+## Package
+
+Bump `version` in `extension/manifest.json`. For Safari, also bump `MARKETING_VERSION` in `safari/FourtyTwolities/FourtyTwolities.xcodeproj/project.pbxproj`.
+
+### Chromium
+
+Zip the **contents** of `extension/` so `manifest.json` is at the zip root (not a parent folder). Upload that zip in the [Chrome Web Store dashboard](https://chrome.google.com/webstore/devconsole). Chrome ignores `browser_specific_settings`.
+
+### Firefox
+
+```
+npx web-ext build
+```
+
+Writes `web-ext-artifacts/fourtytwolities-<version>.zip`. Submit it on [addons.mozilla.org](https://addons.mozilla.org/developers/). Nothing leaves the browser; AMO data collection is declared as `none`.
+
+### Safari
+
+In Xcode: Product → Archive on the FourtyTwolities Mac app, then Distribute App. The wrapper app is `com.michaeleisemann.fourtytwolities`; the extension is `.Extension`.
