@@ -9,7 +9,7 @@ import Cocoa
 import SafariServices
 import WebKit
 
-let extensionBundleIdentifier = "com.androidkitkat.fourtytwolities.Extension"
+let extensionBundleIdentifier = "com.michaeleisemann.fourtytwolities.Extension"
 
 class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHandler {
 

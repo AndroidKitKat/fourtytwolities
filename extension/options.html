@@ -19,14 +19,17 @@
       html,
       body {
         margin: 0;
+        min-width: 40rem;
+        width: 40rem;
         background: var(--bg);
         color: var(--fg);
         font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       }
       main {
-        max-width: 40rem;
-        margin: 0 auto;
-        padding: 2rem 1.25rem 3rem;
+        box-sizing: border-box;
+        max-width: none;
+        margin: 0;
+        padding: 1.25rem 1.35rem 1.5rem;
       }
       h1 {
         font-size: 1.35rem;
@@ -79,6 +82,51 @@
         color: Canvas;
         border-color: transparent;
       }
+      h2 {
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin: 1.5rem 0 0.45rem;
+      }
+      h2:first-of-type {
+        margin-top: 1.1rem;
+      }
+      .lede {
+        margin: 0 0 0.9rem;
+      }
+      .lede code {
+        color: var(--fg);
+      }
+      .toggles {
+        display: grid;
+        gap: 0.85rem;
+      }
+      .toggles.follow {
+        margin-top: 1.1rem;
+      }
+      .toggle {
+        display: flex;
+        gap: 0.7rem;
+        align-items: flex-start;
+        margin: 0;
+        color: inherit;
+        font-size: 0.95rem;
+        font-weight: 400;
+        letter-spacing: 0;
+        text-transform: none;
+        cursor: pointer;
+      }
+      .toggle input {
+        margin-top: 0.2rem;
+      }
+      .toggle small {
+        display: block;
+        color: var(--muted);
+        font-size: 0.8rem;
+        margin-top: 0.15rem;
+      }
       #status {
         min-height: 1.4em;
         margin-top: 1rem;
@@ -89,12 +137,17 @@
   <body>
     <main>
       <h1>FourtyTwolities</h1>
-      <p>Extra utilities and quality of life for Grok.com</p>
-      <p>
-        Example:
-        <code>https://grok.com/?q=hello#gwc=TOKEN</code>
-        or with private chat
-        <code>#private&amp;gwc=TOKEN</code>
+      <p class="lede">Quality of life for grok.com</p>
+
+      <h2>Auto-send</h2>
+      <p class="lede">
+        Grok asks “Send this message?” when a link pre-fills a prompt with
+        <code>?q=</code>. Put this token in the hash as <code>#gwc=…</code> and
+        FourtyTwolities clicks Send for you. Keep it private.
+      </p>
+      <p class="lede">
+        Private chat:
+        <code>https://grok.com/?q=hello#private&amp;gwc=TOKEN</code>
       </p>
 
       <label for="token">Token</label>
@@ -105,10 +158,52 @@
         <button id="save" class="primary" type="button">Save</button>
       </div>
 
-      <label for="sample">Sample URL</label>
+      <label for="sample">Sample link</label>
       <input id="sample" type="text" readonly />
       <div class="row">
-        <button id="copy-sample" type="button">Copy sample URL</button>
+        <button id="copy-sample" type="button">Copy sample link</button>
+      </div>
+
+      <div class="toggles follow">
+        <label class="toggle">
+          <input id="strip-timeout" type="checkbox" />
+          <span>
+            Strip token if the dialog never appears
+            <small>Removes <code>#gwc=</code> after 20 seconds even when Send was not clicked.</small>
+          </span>
+        </label>
+      </div>
+
+      <h2>Chat</h2>
+      <div class="toggles">
+        <label class="toggle">
+          <input id="compact" type="checkbox" />
+          <span>
+            Compact, wider transcript
+            <small>Tighter spacing and a wider reading column.</small>
+          </span>
+        </label>
+        <label class="toggle">
+          <input id="hide-imagine" type="checkbox" />
+          <span>
+            Hide Imagine
+            <small>Removes the Imagine entry from Grok’s header.</small>
+          </span>
+        </label>
+        <label class="toggle">
+          <input id="block-autoplay" type="checkbox" />
+          <span>
+            Block video autoplay
+            <small>Pauses videos until you click them. Cover loops on Imagine stay still.</small>
+          </span>
+        </label>
+        <label class="toggle">
+          <input id="persist-model" type="checkbox" />
+          <span>
+            Remember Fast / Auto / Expert / Heavy / Build
+            <small>Restores the last model you picked on new chats.</small>
+          </span>
+        </label>
       </div>
 
       <p id="status"></p>
